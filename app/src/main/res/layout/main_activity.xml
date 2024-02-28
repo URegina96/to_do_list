@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="To-Do List"
@@ -22,13 +22,25 @@
         app:layout_constraintVertical_bias="0.499" />
 
     <ImageView
-        android:id="@+id/addingNewTasks"
+        android:id="@+id/imageViewAddingNewTasks"
         android:layout_width="78dp"
         android:layout_height="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textViewLogo"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/adding_new_tasks" />
+
+    <ImageView
+        android:id="@+id/imageViewGoToList"
+        android:layout_width="78dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.696"
+        app:srcCompat="@drawable/go_to_list" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
