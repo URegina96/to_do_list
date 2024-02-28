@@ -10,11 +10,13 @@ class AddNewItemTaskList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_new_item_task_list)
 
-        val addButtonSave = findViewById<ImageView>(R.id.imageViewSave)
-        addButtonSave.setOnClickListener {
-            val intent = Intent(this, TaskList::class.java)
+        val imageViewSave = findViewById<ImageView>(R.id.imageViewSave)
+        imageViewSave.setOnClickListener {
+        }
+        val  imageViewReturnToList=findViewById<ImageView>(R.id.imageViewReturnToList)
+        imageViewReturnToList.setOnClickListener{
+            val intent=Intent(this,TaskList::class.java)
             startActivity(intent)
-
         }
     }
 }

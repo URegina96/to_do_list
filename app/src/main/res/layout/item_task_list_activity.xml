@@ -29,5 +29,4 @@
         app:layout_constraintHorizontal_bias="0.921"
         app:layout_constraintStart_toEndOf="@+id/textViewItemTaskList"
         app:layout_constraintTop_toTopOf="parent" />
-    />
   </androidx.constraintlayout.widget.ConstraintLayout>
