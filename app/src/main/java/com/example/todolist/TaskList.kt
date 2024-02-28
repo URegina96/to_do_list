@@ -2,6 +2,7 @@ package com.example.todolist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class TaskList : AppCompatActivity() {
@@ -10,8 +11,10 @@ class TaskList : AppCompatActivity() {
         setContentView(R.layout.task_list_activity)
 
         val recyclerViewTaskList = findViewById<RecyclerView>(R.id.RecyclerViewTaskList)
-        recyclerViewTaskList.setOnClickListener{
-
-        }
+        val dbHelper = DBHelper(this)
+        val dataList = dbHelper.getAllItems() // Получаем список элементов из базы данных
+        val adapter = ItemAdapter(dataList)
+        recyclerViewTaskList.layoutManager = LinearLayoutManager(this)
+        recyclerViewTaskList.adapter = adapter
     }
 }
