@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="27dp"
+        android:textSize="17dp"
         android:textStyle="italic"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,5 +28,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.921"
         app:layout_constraintStart_toEndOf="@+id/textViewItemTaskList"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/MyCheckBox"/>
   </androidx.constraintlayout.widget.ConstraintLayout>
