@@ -8,7 +8,6 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class AddNewItemTaskList : AppCompatActivity() {
@@ -17,7 +16,7 @@ class AddNewItemTaskList : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_new_item_task_list)
+        setContentView(R.layout.add_new_item_task_list_activity)
 
         val editTextName = findViewById<EditText>(R.id.editTextName)
         val textViewItemTaskList = findViewById<TextView>(R.id.textViewItemTaskList)
