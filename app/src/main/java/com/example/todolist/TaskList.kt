@@ -12,7 +12,7 @@ class TaskList : AppCompatActivity() {
 
         val recyclerViewTaskList = findViewById<RecyclerView>(R.id.RecyclerViewTaskList)
         val dbHelper = DBHelper(this)
-        val dataList = dbHelper.getAllItems() // Получаем список элементов из базы данных
+        val dataList = dbHelper.getAllItems()
         val adapter = ItemAdapter(dataList)
         recyclerViewTaskList.layoutManager = LinearLayoutManager(this)
         recyclerViewTaskList.adapter = adapter
