@@ -6,21 +6,31 @@
     android:layout_width="match_parent"
     android:layout_height="80dp">
 
-    <TextView
-        android:id="@+id/textViewItemTaskList"
-        android:layout_width="234dp"
-        android:layout_height="58dp"
-        android:text="TextView"
+
+    <ScrollView
+        android:id="@+id/scrollViewItemTaskList"
+        android:layout_width="268dp"
+        android:layout_height="61dp"
         android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="17dp"
-        android:textStyle="italic"
+        android:layout_gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.508" />
+        app:layout_constraintVertical_bias="0.368">
+
+        <TextView
+            android:id="@+id/textViewItemTaskList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your long text goes here..."
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:textStyle="italic"
+            android:layout_gravity="center"
+            android:gravity="center" />
+    </ScrollView>
 
     <CheckBox
         android:id="@+id/checkBoxItemTaskList"
@@ -29,7 +39,7 @@
         android:padding="17dp"
         android:theme="@style/MyCheckBox"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textViewItemTaskList"
+        app:layout_constraintEnd_toStartOf="@+id/scrollViewItemTaskList"
         app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -42,7 +52,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.844"
-        app:layout_constraintStart_toEndOf="@+id/textViewItemTaskList"
+        app:layout_constraintStart_toEndOf="@+id/scrollViewItemTaskList"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.52"
         app:srcCompat="@drawable/delete" />
