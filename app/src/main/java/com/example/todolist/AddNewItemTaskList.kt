@@ -21,18 +21,14 @@ class AddNewItemTaskList : AppCompatActivity() {
 
         val imageViewSave = findViewById<ImageView>(R.id.imageViewSave)
         imageViewSave.setOnClickListener {
-            val nameText = editTextName.text.toString().trim()
+            val nameText = editTextName.text.toString()
             intent.putExtra("nameText", nameText)
-            if (nameText.isNotEmpty()) {
             Toast.makeText(this, "Успешно сохранено!", Toast.LENGTH_SHORT).show()
                 val dbHelper=DBHelper(this)
                 dbHelper.insertItem(nameText)
                 dataList.add(nameText)
                 adapter = ItemAdapter(dataList, dbHelper)
                 adapter.notifyDataSetChanged()
-            } else {
-                Toast.makeText(this, "Поле пустое", Toast.LENGTH_SHORT).show()
-            }
         }
         val  imageViewReturnToList=findViewById<ImageView>(R.id.imageViewReturnToList)
         imageViewReturnToList.setOnClickListener{
