@@ -50,4 +50,10 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         cursor.close()
         return itemList
     }
+
+    fun deleteItem(nameText: String?) {
+        val db = this.writableDatabase
+        db.delete(TABLE_CONTACTS, "$KEY_NAME = ?", arrayOf(nameText))
+        db.close()
+    }
 }

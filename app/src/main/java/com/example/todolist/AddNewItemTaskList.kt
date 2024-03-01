@@ -27,8 +27,7 @@ class AddNewItemTaskList : AppCompatActivity() {
                 val dbHelper=DBHelper(this)
                 dbHelper.insertItem(nameText)
                 dataList.add(nameText)
-                val dataList = dbHelper.getAllItems()
-                adapter = ItemAdapter(dataList)
+                adapter = ItemAdapter(dataList, dbHelper)
                 adapter.notifyDataSetChanged()
         }
         val  imageViewReturnToList=findViewById<ImageView>(R.id.imageViewReturnToList)

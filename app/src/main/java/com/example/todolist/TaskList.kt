@@ -12,8 +12,8 @@ class TaskList : AppCompatActivity() {
 
         val recyclerViewTaskList = findViewById<RecyclerView>(R.id.RecyclerViewTaskList)
         val dbHelper = DBHelper(this)
-        val dataList = dbHelper.getAllItems()
-        val adapter = ItemAdapter(dataList)
+        val dataList = dbHelper.getAllItems().toMutableList()
+        val adapter = ItemAdapter(dataList, dbHelper)
         recyclerViewTaskList.layoutManager = LinearLayoutManager(this)
         recyclerViewTaskList.adapter = adapter
     }
